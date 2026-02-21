@@ -656,10 +656,6 @@ src/perturbation_py/
 | V11 | S. Villemot, "Solving rational expectations models at first order: What Dynare does," *Dynare Working Papers* 2, 2011. |
 | dolo | P. Winant et al., [dolo](https://github.com/EconForge/dolo), `dolo.algos.perturbations_higher_order` — open-source reference for the Sylvester-equation algorithm. |
 
-## Maintainer
-
-Maintained by [Knowecon](https://github.com/Knowecon).
-
 ## License
 
 MIT
