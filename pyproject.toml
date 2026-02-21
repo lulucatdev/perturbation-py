@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "perturbation-py"
+version = "0.2.0"
+description = "Dynare-inspired perturbation methods for Python DSGE models"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "perturbation_py contributors" }]
+dependencies = [
+  "numpy>=1.23",
+  "scipy>=1.10",
+  "typer>=0.9",
+]
+keywords = ["dsge", "dynare", "perturbation", "macroeconomics", "econometrics"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Topic :: Scientific/Engineering",
+]
+
+[project.scripts]
+perturbation-py = "perturbation_py.cli:main"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]

@@ -1,0 +1,49 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.pyd
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+*.egg
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Octave / Dynare artifacts
+octave-workspace
+*.log
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Reference codebases (not part of this project)
+references/
+
+# GitHub workflows
+.github/
+
+# Dynare-generated artifacts in test fixtures
+tests/fixtures/dynare/+*/
+tests/fixtures/dynare/*/

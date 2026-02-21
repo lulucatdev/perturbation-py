@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+DYNARE_MATLAB_PATH="${DYNARE_MATLAB_PATH:-/opt/homebrew/opt/dynare/lib/dynare/matlab}"
+
+if [ "$#" -lt 1 ]; then
+  echo "Usage: dynare-local <mod-file> [ignored extra args]" >&2
+  exit 2
+fi
+
+if [ "$1" = "--version" ]; then
+  octave --no-gui --quiet --eval "addpath('$DYNARE_MATLAB_PATH'); disp(dynare_version());" 2>/dev/null | tail -n 1
+  exit 0
+fi
+
+mod_file="$1"
+
+octave --no-gui --no-window-system --quiet --eval "addpath('$DYNARE_MATLAB_PATH'); dynare('$mod_file','nolog','noclearall','nograph');"
